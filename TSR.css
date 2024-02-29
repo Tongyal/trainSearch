@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar
+{  
+  /* margin-top: -13rem;   */
+      /* position: fixed; */
+      width: 100vw;
+      z-index: 10;
+     padding: 1rem 0rem 1rem 8rem;
+     display: flex;
+    /* z-index: 10; */
+    /* justify-content:right; */
+
+    /* left: 2rem; */
+    /* text-align: center; */
+    align-items: center;
+    background-color: dimgrey;
+    box-shadow:0px 0px 10px whitesmoke;
+}
+.logo
+{
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+    /* left: 100px; */
+    font-size: xx-large;
+     font-style: normal;
+  color: whitesmoke;
+   user-select: none;
+
+}
+
+
+.button-68 {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #27ae60;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  .button-68:hover {
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+  }
+  
+  .button-68:active {
+    transform: translateY(2px);
+    transition-duration: .35s;
+  }
+  
+  .button-68:hover {
+    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+  }
+  
+
+h1,h2
+{
+  padding-top: 1rem ;
+  background-color: gainsboro;
+  padding-bottom: 1rem ;
+  margin-top: 1rem;
+    text-align: center;
+   font-size: 40px;
+   font-family: "Protest Guerrilla";
+   font-weight: 400;
+   font-style: normal;
+}
+
+.foot{
+    background-color: dimgray;
+    padding: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-evenly;
+  }
+  .icon
+  {
+    overflow-y: hidden;
+  }
+  .f-head
+  {
+    font-size: 2rem;
+    font-family: "Protest Guerrilla";
+    padding: 1rem;
+  }
+  .social-media
+  {
+    font-size: larger;
+    color: gainsboro;
+    display: flex;
+    padding-left:1rem ;
+    gap: 1.5rem;
+  }
+  
+  .copyright
+  {
+    padding: 2rem;
+    font-size: large;
+    font-family: "Rubik", sans-serif;
+    color: whitesmoke;
+  }
+
+  /* .input-section
+  {
+    display: none;
+  }  */
+.top-st-code
+{
+    display: flex;
+    padding-bottom: 4rem;
+    
+}
+.top-top-st-code
+{
+    display: flex;
+    /* display: none; */
+    background-color: gainsboro;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.st-code-input
+{
+    padding:  2rem 0;
+    font-family: "Rubik", sans-serif;
+    border-top-left-radius:8px ;
+    border-bottom-left-radius:8px ;
+    border: 2px solid #27ae60;
+    font-size: 25px;
+    text-align: center;
+    /* background-color: white; */
+    /* border: white; */
+}
+.run-days
+{
+    background-color: gainsboro;
+    font-family: "Rubik", sans-serif;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.run-days p{
+    padding: 1rem;
+  
+    background-color: #27ae60;
+    font: bolder;
+    display: inline;
+    text-align: center;
+    
+}
+.response
+{
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    background-color:rgb(160, 158, 158);
+    min-height: 50px;
+    padding: 0 1rem  ;
+    font-size: 25px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.pnr-heading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.status-head
+{
+    font-size: 2rem;
+    font-family: "Protest Guerrilla";
+    padding: 1rem;
+}
+
+.train-data
+{
+    display: flex;
+    padding-top:1rem ;
+    align-items: center;
+    justify-content: center;
+}
+
+/* timeline css */
+
+.time-body{
+  font-family: "Rubik", sans-serif;
+  /* background-color: aqua; */
+	background-color:gainsboro;
+	width:100%;
+  /* height: 40vh; */
+  /* overflow-y: scroll; */
+	/* min-height:100vh; */
+	display:flex;
+	justify-content:center;
+	align-items:center;
+  padding-bottom:3rem ;
+
+}
+.timeline{
+	/* width:800px; */
+  width: 100vw;
+  height: 40vh;
+  margin-top: -2rem;
+  overflow-y: scroll;
+	background-color:dimgray;
+	color:#fff;
+	padding:30px 20px;
+  
+	box-shadow:0px 0px 10px rgba(0,0,0,.5);
+}
+.timeline ul{
+  padding-top:4rem;
+	list-style-type:none;
+	border-left:2px solid whitesmoke;
+	padding:10px 5px;
+}
+.timeline ul li{
+	padding:20px 20px;
+	position:relative;
+	cursor:pointer;
+	transition:.5s;
+}
+.timeline ul li span{
+	display:inline-block;
+	background-color:#27ae60;
+	border-radius:25px;
+	padding:2px 5px;
+	font-size:15px;
+	text-align:center;
+}
+.timeline ul li .content h3{
+	color:black;
+	font-size:17px;
+	padding-top:5px;
+}
+.timeline ul li .content p{
+	padding:5px 0px 2px 0px;
+	font-size:15px;
+}
+.timeline ul li:before{
+	position:absolute;
+	content:'';
+	width:10px;
+	height:10px;
+	background-color:white;
+	border-radius:50%;
+	left:-5px;
+	top:28px;
+	transition:.5s;
+}
+.timeline ul li:hover{
+	background-color:rgb(164, 156, 156);
+}
+.timeline ul li:hover:before{
+	background-color:#27ae60;
+	box-shadow:0px 0px 10px 2px #27ae60;
+}
+@media (max-width:300px){
+	.timeline{
+		width:100%;
+		padding:30px 5px 30px 10px;
+	}
+	.timeline ul li .content h3{
+		color:#34ace0;
+		font-size:15px;
+	}
+
+}
