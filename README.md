@@ -3,6 +3,11 @@
 
 Gamini is a web application that provides various functionalities related to Indian Railways train details. Users can access features like checking live train status, finding trains between two stations, checking train fares, viewing trains available from a specific station, checking PNR status, and accessing train routines and schedules.
 
+# Screenshot of main page
+
+![image](https://github.com/prince7703/Gamini/assets/97835858/1d16c6c4-986f-457c-830f-26c9d89f3e66)
+
+
 # Features
 1. Live Train Status: Users can track the real-time status of trains.
 2. Trains Between Two Stations: Find all trains running between two specified stations.
