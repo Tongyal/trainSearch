@@ -8,6 +8,7 @@ Gamini is a web application that provides various functionalities related to Ind
 4. Trains Available from a Station: View the list of trains available from a specific station.
 5. Check PNR Status: Check the Passenger Name Record (PNR) status of a booked ticket.
 6. Train Routine and Schedule: Access detailed routines and schedules of trains.
+
 **Technologies Used**
 - HTML
 - CSS
