@@ -28,10 +28,11 @@ Used IRCTC rapid api for fetching realtime train data to webpage
 # How to Use
 1. Clone the repository to your local machine.
 2. Obtain an API key from IRCTC Rapid API for accessing train data.
-3. Integrate the API key into the project to fetch train information.
-4. Open the project in your preferred code editor.
-5. Modify the code as needed to customize the website.
-6. Run the project locally to test its functionalities.
+3. Change the api key in all js files.
+4. Integrate the API key into the project to fetch train information.
+5. Open the project in your preferred code editor.
+6. Modify the code as needed to customize the website.
+7. Run the project locally to test its functionalities.
 
 # Contributors
 
