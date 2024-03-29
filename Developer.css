@@ -50,7 +50,7 @@ p{
     background-color: black;
     border-radius: 8px;
     border-style: none;
-    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    /* box-shadow: rgba(39, 174, 96, .15) 0 4px 9px; */
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -66,29 +66,21 @@ p{
     position: relative;
     text-align: center;
     text-decoration: none;
-    transform: translate3d(0, 0, 0);
-    transition: all .3s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: top;
-    white-space: nowrap;
+    /* transform: translate3d(0, 0, 0); */
+    
   }
   
   .button-68:hover {
-    background-color: #000000cf;
-    opacity: 1;
-    transform: translateY(0);
+    background-color: dimgray;
+   
+  
     transition-duration: .35s;
   }
   
-  .button-68:active {
-    transform: translateY(2px);
-    transition-duration: .35s;
-  }
+
   
   .button-68:hover {
-    box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+    box-shadow: black 0px 0px 12px;
   }
   
   

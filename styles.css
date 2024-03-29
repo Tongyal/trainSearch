@@ -5,6 +5,12 @@
 .wrapper{
   position: relative;
 }
+nav{
+  position:fixed;
+  width: 100%;
+  z-index: 10;
+  
+}
 .navigation_links
 {
   height: 30rem;
@@ -14,7 +20,7 @@
   
   position: fixed;
   z-index: 10;
-  top: 15%;
+  top: 21%;
   left: 3%;
   display: flex;
   flex-direction: column;
@@ -35,7 +41,7 @@
 .navbar
 {  
   /* margin-top: -13rem;   */
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
     display: flex;
     z-index: 10;
     /* justify-content; */
@@ -43,8 +49,8 @@
 
     align-items: center;
     background-color: dimgrey;
-    box-shadow:0px 0px 10px red;
-    /* position: static; */
+    box-shadow:0px 0px 10px chocolate;
+    /* position:-webkit-sticky; */
     /* padding-right: 10rem; */
     /* width: 100vw; */
 }
@@ -134,44 +140,6 @@
 
 
 
-/* CSS */
-.button-50 {
-  appearance: button;
-  background-color: #000;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  /* box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px; */
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-
-
-
-
-
-@media (min-width: 768px) {
-  .button-50 {
-    padding: 12px 50px;
-  }
-}
 
 .main-func
 {
@@ -188,6 +156,9 @@
      font-style: normal;
   color: whitesmoke;
    user-select: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
 }
 .back
@@ -206,9 +177,15 @@
 .welcome{
   display: flex;
    position: absolute;
-    padding:  5rem 10rem;
+   margin-top: 5rem;
+    padding:  5rem 15rem;
     /* margin-top:-10rem ; */
 }
+
+
+
+
+
 .wel-text
 {
     background-color: dimgray;
@@ -262,10 +239,12 @@
   font-family: "Rubik", sans-serif;
   padding-bottom: 1rem;
   font-size: 30px;
+  line-height: 2rem;
   text-align: center;
 }
 .li-desc
 {
+  font-family: "Rubik", sans-serif;
 font-size: 20px;
 padding-bottom: 2rem;
 text-align: center;
@@ -279,6 +258,10 @@ color: dimgray;
   /* flex-direction: column; */
   /* align-items: center; */
   justify-content: space-evenly;
+}
+.foot i:hover{
+color: #27ae60;
+transition: 0.35s;
 }
 
 .f-head
@@ -303,3 +286,5 @@ color: dimgray;
   font-family: "Rubik", sans-serif;
   color: whitesmoke;
 }
+
+@

@@ -23,7 +23,7 @@ const options = {
     toStationCode: des
   },
   headers: {
-    'X-RapidAPI-Key': '374fe8bb26msh25dc509fadb6daep16f529jsneff256bc829c',
+    'X-RapidAPI-Key': '818231618emshdd755b0078b204ap14794ejsnfd4b490fa409',
     'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
   }
 };

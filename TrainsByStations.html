@@ -58,16 +58,45 @@
 
     <div class="show-trains">
       <h1>Train Details </h1>
-      <h2>Originating Trains</h2>
+      <div class="top_origin">
 
-      <table class="show-table-info origin-train">
+        <h2>Originating Trains</h2>
+         
+        <div class="left-slide left_org">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div class="right-slide right_org">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+
+        <table class="show-table-info">
+          <!-- <tr>
+            <th>Train No.</th>
+            <th>Train Name</th>
+          
+            <th>Dept. Time</th>
+          </tr> -->
+        </table>
+
+      <table class="show-table-info ">
         <tr>
           <th>Train No.</th>
           <th>Train Name</th>
         
           <th>Dept. Time</th>
         </tr>
+
+        <tbody class="origin-train">
+
+        </tbody>
         <!-- <tr>
+          <th>Train No.</th>
+          <th>Train Name</th>
+        
+          <th>Dept. Time</th>
+        </tr> -->
+<!-- 
+        <tr>
           <td>01665</td>
           <td>DBG FESTIVAL SPL</td>
       
@@ -81,6 +110,8 @@
         </tr> -->
 
       </table>
+      </div>
+      
 
       <!-- was trying to show 10 trains at atime -->
       <!-- <div>
@@ -89,15 +120,25 @@
        <button class="button-77" role="button"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
       </div> -->
 
-      <h2>Passing Trains</h2>
+           <div class="top_pass">
 
-      <table class="show-table-info pass-train">
+      <h2>Passing Trains</h2>
+      <div class="left-slide left_pass">
+        <i class="fa-solid fa-angles-left"></i>
+      </div>
+      <div class="right-slide right_pass">
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+     
+
+      <table class="show-table-info ">
         <tr>
           <th>Train No.</th>
           <th>Train Name</th>
           <th>Arr. Time</th>
           <th>Dept. Time</th>
         </tr>
+        <tbody class="pass-train"></tbody>
         <!-- <tr>
           <td>01665</td>
           <td>DBG FESTIVAL SPL</td>
@@ -111,15 +152,32 @@
           <td>14:10</td>
         </tr> -->
       </table>
-      <h2>Destination Trains</h2>
 
-      <table class="show-table-info dest-train">
+           </div>
+
+           <div class="top_desti">
+               <h2>Destination Trains</h2>
+               <div class="left-slide left_dest">
+                <i class="fa-solid fa-angles-left"></i>
+              </div>
+              <div class="right-slide right_dest">
+                <i class="fa-solid fa-angles-right"></i>
+              </div>
+
+              
+             
+
+      <table class="show-table-info ">
         <tr>
           <th>Train No.</th>
           <th>Train Name</th>
           <th>Arr. Time</th>
       
         </tr>
+
+        <tbody class="dest-train">
+
+        </tbody>
         <!-- <tr>
           <td>01665</td>
           <td>DBG FESTIVAL SPL</td>
@@ -133,6 +191,8 @@
           
         </tr> -->
       </table>
+           </div>
+   
       
       
       

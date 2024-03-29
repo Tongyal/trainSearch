@@ -306,7 +306,9 @@
 {
   /* margin-top: 2rem; */
   margin-bottom: 5rem;
+
   display: none;
+
   /* background-color: gainsboro; */
   /* padding-bottom: 4rem; */
   /* padding-top: 10rem; */
@@ -339,8 +341,46 @@ th{
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
-  width: 100vw;
+  /* position: relative; */
+  /* width: 100vw; */
   
+}
+.top_origin,.top_pass,.top_desti
+{
+  position: relative;
+  display: block;
+}
+
+.left-slide
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  height: 50px;
+  width: 50px;
+  background-color:dimgray;
+position: absolute;
+border-radius: 50%;
+  z-index: 10;
+  top: 50%;
+  left: 5%;
+}
+.right-slide
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius:50% ;
+  background-color:dimgray;
+position: absolute;
+  z-index: 10;
+  right: 5%;
+  top: 50%;
 }
 .note-time
   {
