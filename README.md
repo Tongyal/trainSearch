@@ -35,8 +35,6 @@ Used IRCTC rapid api for fetching realtime train data to webpage
 6. Modify the code as needed to customize the website.
 7. Run the project locally to test its functionalities.
 
-# Contributors
 
-**Prince Koshti**
 
 **NOTE**:: the live webpage may not work coz the api has only 25 requests/month
