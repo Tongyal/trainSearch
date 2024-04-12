@@ -24,6 +24,7 @@ Gamini is a web application that provides various functionalities related to Ind
 **API used**
 
 Used IRCTC rapid api for fetching realtime train data to webpage
+[Irctc Api link](https://rapidapi.com/IRCTCAPI/api/irctc1)
 
 # How to Use
 1. Clone the repository to your local machine.
