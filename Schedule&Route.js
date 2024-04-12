@@ -4,8 +4,9 @@ const train_no=document.querySelector(".tr-no-resp");
 const train_nm=document.querySelector(".tr-nm-resp");
 const rundy=document.querySelector(".run-days");
 const route_list=document.querySelector(".train-route-li");
-
-
+const loading=document.querySelector(".loader");
+const hide_input=document.querySelector(".input-section")
+const show_output=document.querySelector(".train_top_output")
 async function get_response(tr_no)
 {
     
@@ -31,6 +32,7 @@ try {
 
 submit.addEventListener("click",async(e)=>
 {
+  loading.classList.add("active");
     const response=await get_response(st_code.value);
     console.log(response);
      train_no.innerHTML=response.data.trainNumber;
@@ -101,6 +103,10 @@ submit.addEventListener("click",async(e)=>
 
 
      }
+
+  loading.classList.remove("active");
+  hide_input.classList.add("active");
+  show_output.classList.add("active");
 
 
 

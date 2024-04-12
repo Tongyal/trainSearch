@@ -21,6 +21,39 @@
     background-color: dimgrey;
     box-shadow:0px 0px 10px whitesmoke;
 }
+
+.wrapper
+{
+  display: flex;
+  min-height: 92vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-section.active
+{
+  display: none;
+}
+
+.train_top_output.active{
+  display: flex;
+  flex-direction: column;
+}
+.train_top_output
+{
+  display: none;
+}
+.loader
+{
+  margin: 5rem;
+  /* display: flex; */
+
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.loader.active{
+  display: flex;
+}
 .logo
 {
     font-family: "Protest Revolution", sans-serif;
@@ -205,6 +238,7 @@ h1,h2
 .pnr-heading
 {
     display: flex;
+   
     justify-content: center;
     align-items: center;   
 }
