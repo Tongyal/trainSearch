@@ -46,6 +46,8 @@ const des_stat = document.querySelector(".res-des-st");
 const pass_count = document.querySelector(".res-pas-count");
 const ticket_fare = document.querySelector(".res-fare");
 const pantry = document.querySelector(".res-pantry");
+const tcancel = document.querySelector(".res-cancel");
+
 
 submit_but.addEventListener("click", async(e) => {
 
@@ -76,6 +78,13 @@ submit_but.addEventListener("click", async(e) => {
    pass_count.innerText=response_data.data.data.PassengerCount;
    ticket_fare.innerText=response_data.data.data.TicketFare;
    pantry.innerText=response_data.data.data.HasPantry;
+   let tflag=response_data.data.data.TrainCancelledFlag;
+   if(tflag=="true")
+   tcancel.innerText="Cancelled";
+  else{
+    tcancel.innerText="Not cancelled";
+  }
+
   }
 
   loading.classList.remove("active");
