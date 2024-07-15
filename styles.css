@@ -1,13 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+   
 }
 .wrapper{
   position: relative;
+  background-color: rgb(220, 217, 222);
+ 
 }
+/* navbar */
 nav{
-  position:fixed;
-  width: 100%;
+  position:sticky;
+  width: 100vw;
   z-index: 10;
   
 }
@@ -19,29 +23,33 @@ nav{
   z-index: 20;
   
   position: fixed;
-  z-index: 10;
-  top: 21%;
-  left: 3%;
+ 
+  top: 20%;
+  right: 3%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top:1rem ;
-  padding-bottom: 1rem;
+  justify-content: space-around;
+  /* padding-top:1rem ;
+  padding-bottom: 1rem; */
   border: 1px solid dimgray;
   border-radius: 10px;
   box-shadow: 0 0 20px #27ae60;
  
 }
 
+
+
+
+
 .nav-button{
   position: absolute;
   box-sizing: border-box;
-  left: 30px;
+  right: 1rem;
 }
 .navbar
 {  
   /* margin-top: -13rem;   */
-  padding: 1rem 1rem;
+    padding: 1rem 1rem;
     display: flex;
     z-index: 10;
     /* justify-content; */
@@ -174,21 +182,44 @@ nav{
     
 }
 
-.welcome{
+/* .welcome{
   display: flex;
+  align-items: center;
+  justify-content: center; 
+  
    position: absolute;
-   margin-top: 5rem;
-    padding:  5rem 15rem;
-    /* margin-top:-10rem ; */
+  padding:1rem 1.5rem ;
+   
+     margin-top:-10rem ;
+} */
+
+
+.hero-head
+{
+  /* text-align: right; */
+  /* max-width: 800px; */
+height: auto;
+/* overflow-x: hidden; */
+  margin-left: 2rem;
+   
+   font-family: "Protest Guerrilla";
+   font-weight: 400;
+   font-style: normal;
+   
+
+   padding: 2rem 0rem 2rem 0rem ;
 }
-
-
-
+/* @media only screen and (max-width: 600px) {
+  .hero-head {
+    background-color: lightblue;
+  }
+} */
 
 
 .wel-text
 {
-    background-color: dimgray;
+  margin-top: 6rem;
+    /* background-color: dimgray; */
 }
 .wel-text h1
 {
@@ -206,7 +237,7 @@ nav{
     /* font-family: cursive; */
     padding-bottom: 2rem;
     font-optical-sizing: auto;
-     color: white;
+    color: dimgray;
     font-style: normal;
     font-size: 25px;
     padding-left: 4rem;
@@ -218,7 +249,7 @@ nav{
     flex-direction: column;
     align-items: center;
     font-weight: 600;
-    padding-top: 45rem;
+    padding-top: 5rem;
 }
 .choose-head
 {
@@ -287,4 +318,64 @@ transition: 0.35s;
   color: whitesmoke;
 }
 
-@
+/* slideshow */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100vw;
+  max-height: 40vh;
+  /* overflow: hidden; */
+  object-fit: contain;
+  position: relative;
+  margin: auto;
+  padding-top: 1rem;
+  /* padding-bottom: 20rem; */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  position: relative;
+  /* max-height: 300; */
+  object-fit: cover;
+}
+.mySlides img{
+  object-fit: cover;
+  max-height: 50vh;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+
+  bottom: 1rem;
+  /* top: 80%; */
+  
+  width: 100%;
+  text-align: center;
+ /* From https://css.glass */
+background: rgba(255, 255, 255, 0.02);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(138, 55, 55, 0.1);
+backdrop-filter: blur(2.2px);
+-webkit-backdrop-filter: blur(2.2px);
+border: 1px solid rgba(255, 255, 255, 0.23);
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+ 
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10;
+  left: 10;
+}
+
+/* The dots/bullets/indicators */

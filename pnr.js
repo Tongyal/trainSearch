@@ -12,7 +12,7 @@ async function get_pnr_data(pnr) {
       pnrNumber: pnr,
     },
     headers: {
-      "X-RapidAPI-Key": "818231618emshdd755b0078b204ap14794ejsnfd4b490fa409",
+      "X-RapidAPI-Key": "e1aa14092bmsh46a7b7297d0ff9fp1a1491jsn9956860de603",
       "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
     },
   };
@@ -77,7 +77,7 @@ submit_but.addEventListener("click", async(e) => {
    des_stat.innerText= `${response_data.data.data.ReservationUptoName} (${response_data.data.data.ReservationUpto})`;
    pass_count.innerText=response_data.data.data.PassengerCount;
    ticket_fare.innerText=response_data.data.data.TicketFare;
-   pantry.innerText=response_data.data.data.HasPantry;
+   pantry.innerText=response_data.data.data.TrainStatus;
    let tflag=response_data.data.data.TrainCancelledFlag;
    if(tflag=="true")
    tcancel.innerText="Cancelled";

@@ -148,7 +148,14 @@
     padding-bottom:5rem ;
     justify-content: space-evenly;
   }
-
+  @media only screen and (max-width: 800px) {
+    .train-info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 
   .source-name
   {

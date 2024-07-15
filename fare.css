@@ -89,6 +89,14 @@
     flex-direction: column;
     padding: 5rem 1rem;
   }
+  @media only screen and (max-width: 900px) {
+    .train-info{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+    }
+  }
 
   .input-section.active
   {
