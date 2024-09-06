@@ -5,7 +5,8 @@ Gamini is a web application that provides various functionalities related to Ind
 
 # Screenshot of main page
 
-![image](https://github.com/prince7703/Gamini/assets/97835858/1d16c6c4-986f-457c-830f-26c9d89f3e66)
+![Screenshot (246)](https://github.com/user-attachments/assets/f09b83dd-4dc7-4163-8ddd-961614bf8b1d)
+
 
 
 # Features
