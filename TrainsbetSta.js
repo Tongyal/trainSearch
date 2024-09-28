@@ -6,7 +6,7 @@ const append_det=document.querySelector(".show-trains");
 const loading=document.querySelector(".loader");
 const hide_input=document.querySelector(".input-info");
 const show_out=document.querySelector(".show-trains");
-
+const show_error = document.querySelector(".top-error");
 async function get_response(src,dest,doj)
 {
   
@@ -110,6 +110,10 @@ submit.addEventListener("click", async(e)=>
     }
     loading.classList.remove("active");
     hide_input.classList.add("active");
-    show_out.classList.add("active");
+    if (data_array && data_array.length > 0) 
+      show_out.classList.add("active");
+    else {
+      show_error.classList.add("active");
+    }
 
 })
