@@ -16,7 +16,7 @@ const loading=document.querySelector(".loader");
 const hide_input=document.querySelector(".input-section");
 const show_out=document.querySelector(".top-status-info");
 // const prev_more_info=document.querySelector(".prev-stat-li-info");
-
+const show_error = document.querySelector(".top-error");
 
 async function get_data(tn)
 {
@@ -61,9 +61,9 @@ submit.addEventListener("click",async(e)=>{
     cur_stat7.innerHTML=response.data.stoppage_number;
 
     
-    const curr_array=response.data.current_location_info;
+    const curr_array=response.data?.current_location_info;
 
-    for(var i=0;i<curr_array.length;i++)
+    for(var i=0;curr_array && i<curr_array.length;i++)
     {
       const child1=document.createElement('li');
       const subchild1=document.createElement('span');
@@ -91,122 +91,114 @@ submit.addEventListener("click",async(e)=>{
     }
 
 
-    const prev_array=response.data.previous_stations;
+    const prev_array=response.data?.previous_stations;
 
-    for(var i=0;i<prev_array.length;i++)
-    {
-          const parent=document.createElement('li')
-          const child1=document.createElement("span");
-          child1.innerText= `Station-${prev_array[i].stoppage_number}`;
-          parent.appendChild(child1);
+    for (var i = 0; prev_array && i < prev_array.length; i++) {
+      const parent = document.createElement("li");
+      const child1 = document.createElement("span");
+      child1.innerText = `Station-${prev_array[i].stoppage_number}`;
+      parent.appendChild(child1);
 
-          const child2=document.createElement('div');
-          child2.className="prev-stat-li-info";
+      const child2 = document.createElement("div");
+      child2.className = "prev-stat-li-info";
 
-          const subchild1=document.createElement('h3');
-          subchild1.className="prev-child";
-          subchild1.innerText=`${prev_array[i].station_name}(${prev_array[i].station_code})`;
-          child2.appendChild(subchild1);
-          console.log("prince");
+      const subchild1 = document.createElement("h3");
+      subchild1.className = "prev-child";
+      subchild1.innerText = `${prev_array[i].station_name}(${prev_array[i].station_code})`;
+      child2.appendChild(subchild1);
+      console.log("prince");
 
-          const subchild2=document.createElement('h3');
-          subchild2.className="prev-child";
-          subchild2.innerText=`Platform:(${prev_array[i].platform_number})`;
-          child2.appendChild(subchild2);
+      const subchild2 = document.createElement("h3");
+      subchild2.className = "prev-child";
+      subchild2.innerText = `Platform:(${prev_array[i].platform_number})`;
+      child2.appendChild(subchild2);
 
-          const subchild3=document.createElement('h3');
-          subchild3.className="prev-child";
-          subchild3.innerText=`Actual arr. time :(${prev_array[i].sta})`;
-          child2.appendChild(subchild3);
+      const subchild3 = document.createElement("h3");
+      subchild3.className = "prev-child";
+      subchild3.innerText = `Actual arr. time :(${prev_array[i].sta})`;
+      child2.appendChild(subchild3);
 
-          const subchild4=document.createElement('h3');
-          subchild4.className="prev-child";
-          subchild4.innerText=`Expected arr. time :(${prev_array[i].eta})`;
-          child2.appendChild(subchild4);
+      const subchild4 = document.createElement("h3");
+      subchild4.className = "prev-child";
+      subchild4.innerText = `Expected arr. time :(${prev_array[i].eta})`;
+      child2.appendChild(subchild4);
 
+      const subchild5 = document.createElement("h3");
+      subchild5.className = "prev-child";
+      subchild5.innerText = `Actual dept. time :(${prev_array[i].std})`;
+      child2.appendChild(subchild5);
 
-          const subchild5=document.createElement('h3');
-          subchild5.className="prev-child";
-          subchild5.innerText=`Actual dept. time :(${prev_array[i].std})`;
-          child2.appendChild(subchild5);
+      const subchild6 = document.createElement("h3");
+      subchild6.className = "prev-child";
+      subchild6.innerText = `Expected dept. time :(${prev_array[i].etd})`;
+      child2.appendChild(subchild6);
 
-          const subchild6=document.createElement('h3');
-          subchild6.className="prev-child";
-          subchild6.innerText=`Expected dept. time :(${prev_array[i].etd})`;
-          child2.appendChild(subchild6);
+      const subchild7 = document.createElement("h3");
+      subchild7.className = "prev-child";
+      subchild7.innerText = `Arrival delay:(${prev_array[i].arrival_delay})`;
+      child2.appendChild(subchild7);
 
-          const subchild7=document.createElement('h3');
-          subchild7.className="prev-child";
-          subchild7.innerText=`Arrival delay:(${prev_array[i].arrival_delay})`;
-          child2.appendChild(subchild7);
-
-
-          parent.appendChild(child2);
-          prev_ul.appendChild(parent);
-          console.log("koshti");
-
-
+      parent.appendChild(child2);
+      prev_ul.appendChild(parent);
+      console.log("koshti");
     }
 
-    const up_array=response.data.upcoming_stations;
+    const up_array=response.data?.upcoming_stations;
 
-    for(var i=0;i<up_array.length;i++)
-    {
-          const parent=document.createElement('li')
-          const child1=document.createElement("span");
-          child1.innerText= `Station-${up_array[i].stoppage_number}`;
-          parent.appendChild(child1);
+    for (var i = 0; up_array && i < up_array.length; i++) {
+      const parent = document.createElement("li");
+      const child1 = document.createElement("span");
+      child1.innerText = `Station-${up_array[i].stoppage_number}`;
+      parent.appendChild(child1);
 
-          const child2=document.createElement('div');
-          child2.className="prev-stat-li-info";
+      const child2 = document.createElement("div");
+      child2.className = "prev-stat-li-info";
 
-          const subchild1=document.createElement('h3');
-          subchild1.className="prev-child";
-          subchild1.innerText=`${up_array[i].station_name}(${up_array[i].station_code})`;
-          child2.appendChild(subchild1);
-          console.log("prince");
+      const subchild1 = document.createElement("h3");
+      subchild1.className = "prev-child";
+      subchild1.innerText = `${up_array[i].station_name}(${up_array[i].station_code})`;
+      child2.appendChild(subchild1);
+      console.log("prince");
 
-          const subchild2=document.createElement('h3');
-          subchild2.className="prev-child";
-          subchild2.innerText=`Platform:(${up_array[i].platform_number})`;
-          child2.appendChild(subchild2);
+      const subchild2 = document.createElement("h3");
+      subchild2.className = "prev-child";
+      subchild2.innerText = `Platform:(${up_array[i].platform_number})`;
+      child2.appendChild(subchild2);
 
-          const subchild3=document.createElement('h3');
-          subchild3.className="prev-child";
-          subchild3.innerText=`Actual arr. time :(${up_array[i].sta})`;
-          child2.appendChild(subchild3);
+      const subchild3 = document.createElement("h3");
+      subchild3.className = "prev-child";
+      subchild3.innerText = `Actual arr. time :(${up_array[i].sta})`;
+      child2.appendChild(subchild3);
 
-          const subchild4=document.createElement('h3');
-          subchild4.className="prev-child";
-          subchild4.innerText=`Expected arr. time :(${up_array[i].eta})`;
-          child2.appendChild(subchild4);
+      const subchild4 = document.createElement("h3");
+      subchild4.className = "prev-child";
+      subchild4.innerText = `Expected arr. time :(${up_array[i].eta})`;
+      child2.appendChild(subchild4);
 
+      const subchild5 = document.createElement("h3");
+      subchild5.className = "prev-child";
+      subchild5.innerText = `Actual dept. time :(${up_array[i].std})`;
+      child2.appendChild(subchild5);
 
-          const subchild5=document.createElement('h3');
-          subchild5.className="prev-child";
-          subchild5.innerText=`Actual dept. time :(${up_array[i].std})`;
-          child2.appendChild(subchild5);
+      const subchild6 = document.createElement("h3");
+      subchild6.className = "prev-child";
+      subchild6.innerText = `Expected dept. time :(${up_array[i].etd})`;
+      child2.appendChild(subchild6);
 
-          const subchild6=document.createElement('h3');
-          subchild6.className="prev-child";
-          subchild6.innerText=`Expected dept. time :(${up_array[i].etd})`;
-          child2.appendChild(subchild6);
+      const subchild7 = document.createElement("h3");
+      subchild7.className = "prev-child";
+      subchild7.innerText = `Arrival delay:(${up_array[i].arrival_delay})`;
+      child2.appendChild(subchild7);
 
-          const subchild7=document.createElement('h3');
-          subchild7.className="prev-child";
-          subchild7.innerText=`Arrival delay:(${up_array[i].arrival_delay})`;
-          child2.appendChild(subchild7);
-
-
-          parent.appendChild(child2);
-          upcom_ul.appendChild(parent);
-          console.log("koshti");
-
-
+      parent.appendChild(child2);
+      upcom_ul.appendChild(parent);
+      console.log("koshti");
     }
 
     loading.classList.remove("active");
     hide_input.classList.add("active");
-    show_out.classList.add("active");
+
+    if (response.data.status_as_of) show_out.classList.add("active");
+    else show_error.classList.add("active");
 
 })

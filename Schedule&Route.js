@@ -7,6 +7,7 @@ const route_list=document.querySelector(".train-route-li");
 const loading=document.querySelector(".loader");
 const hide_input=document.querySelector(".input-section")
 const show_output=document.querySelector(".train_top_output")
+const show_error = document.querySelector(".top-error");
 async function get_response(tr_no)
 {
     
@@ -72,7 +73,7 @@ submit.addEventListener("click",async(e)=>
      const  train_route_array=response.data.route;
 
 
-     for(var i=0;i<train_route_array.length;i++)
+     for(var i=0;train_route_array && i<train_route_array.length;i++)
      {
         const child=document.createElement('li');
         const subchild1=document.createElement('span');
@@ -106,7 +107,12 @@ submit.addEventListener("click",async(e)=>
 
   loading.classList.remove("active");
   hide_input.classList.add("active");
-  show_output.classList.add("active");
+  
+  if (response.data.trainName) show_output.classList.add("active");
+  // show_out.classList.add("active");
+  else {
+    show_error.classList.add("active");
+  }
 
 
 

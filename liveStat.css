@@ -202,6 +202,95 @@ h1,h2
     display: flex;
   }
 
+
+/* error handling */
+
+/* From Uiverse.io by SouravBandyopadhyay */ 
+.top-error {
+width: 100vw;
+/* position: absolute; */
+margin-top: 4rem;
+padding-top: 8rem;
+padding-bottom: 4rem;
+display: none;
+justify-content: center;
+background-color: gainsboro;
+}
+.top-error.active{
+  display: flex;
+}
+.notification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 18rem;
+  height: 10rem;
+  background: #29292c;
+  border-radius: 1rem;
+  border: 2px solid #27ae60;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  /* --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff); */
+  --color: #32a6ff
+}
+
+
+
+
+
+.notititle {
+  color: red;
+  /* background-color: dimgray; */
+  padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+  font-weight: 500;
+  font-size: 2rem;
+  transition: transform 300ms ease;
+  z-index: 10;
+}
+
+
+
+.notibody {
+  color: white;
+  font: bolder;
+  font-size: 1.5rem;
+  padding: 0 1.25rem;
+  transition: transform 300ms ease;
+  z-index: 5;
+}
+
+
+
+.notiglow,
+.notiborderglow {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle closest-side at center, white, transparent);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+
+
+
+.note {
+  color: var(--color);
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  width: 75%;
+}
+
+
+
+
 .top-head
 {
   /* width: 30vw; */
