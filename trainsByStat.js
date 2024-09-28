@@ -1,5 +1,5 @@
 
-const hide_output=document.querySelector(".show-trains");
+const show_output=document.querySelector(".show-trains");
 const hide_input=document.querySelector(".top-top-st-code");
 const loading=document.querySelector(".loader");
 const stat_input=document.querySelector(".st-code-input");
@@ -13,7 +13,7 @@ const pass_right=document.querySelector(".right_pass")
 const pass_left=document.querySelector(".left_pass")
 const dest_right=document.querySelector(".right_dest")
 const dest_left=document.querySelector(".left_dest")
-
+const show_error = document.querySelector(".top-error");
  var origin_array=new Array();
  var ori_pages;
 
@@ -29,15 +29,16 @@ async function get_response(stcode)
 {
 console.log(stcode)
 const options = {
-  method: 'GET',
-  url: 'https://irctc1.p.rapidapi.com/api/v3/getTrainsByStation',
+  method: "GET",
+  url: "https://irctc1.p.rapidapi.com/api/v3/getTrainsByStation",
   params: {
-    stationCode: stcode
-},
+    stationCode: stcode,
+  },
   headers: {
-    'X-RapidAPI-Key': '07cd06475bmshe4b7c90f93c9c80p1cda5fjsna3b003ac7d95',
-    'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
-  }
+    // "X-RapidAPI-Key": "07cd06475bmshe4b7c90f93c9c80p1cda5fjsna3b003ac7d95",
+    "X-RapidAPI-Key": "f5f35543dfmsh48fcdb9e6b6f345p16e4eejsn82174aa9f4b6",
+    "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
+  },
 };
 
 try {
@@ -67,52 +68,7 @@ ori_pages=Math.floor(ori_pages)
 console.log(ori_pages)
 console.log(origin_array.length)
  origin_det(0);
-// for(var i=0;i<origin_array.length && count <10 ;i++)
-// {
 
-
-//     var newChild1 = document.createElement("tr");
-//     var newSubChild1 =document.createElement("td"); 
-//     var newSubChild2 =document.createElement("td"); 
-//     var newSubChild3 =document.createElement("td");
-
-//     newSubChild1.textContent=origin_array[i].trainNo;
-//     newSubChild2.textContent=origin_array[i].trainName;
-//     newSubChild3.textContent=origin_array[i].departureTime;
-//     newChild1.appendChild(newSubChild1);
-//     newChild1.appendChild(newSubChild2);
-//     newChild1.appendChild(newSubChild3);
-
-//     origin_train.appendChild(newChild1);
-     
-//     count++;
-// }
-
-
-
-
-
-// for(var i=0;i<pass_array.length;i++)
-// {
-//     var newChild1 = document.createElement("tr");
-//     var newSubChild1 =document.createElement("td"); 
-//     var newSubChild2 =document.createElement("td"); 
-//     var newSubChild3 =document.createElement("td");
-//     var newSubChild4 =document.createElement("td");
-
-//     newSubChild1.textContent=pass_array[i].trainNo;
-//     newSubChild2.textContent=pass_array[i].trainName;
-//     newSubChild3.textContent=pass_array[i].arrivalTime;
-//     newSubChild4.textContent=pass_array[i].departureTime;
-//     newChild1.appendChild(newSubChild1);
-//     newChild1.appendChild(newSubChild2);
-//     newChild1.appendChild(newSubChild3);
-//     newChild1.appendChild(newSubChild4);
-
-//     pass_train.appendChild(newChild1);
-     
-
-// }
 
 pass_pages=(pass_array.length/ 10) + ((pass_array.length % 10) !== 0)
 pass_pages=Math.floor(pass_pages)
@@ -120,28 +76,6 @@ console.log(pass_pages)
 console.log(pass_array.length)
  pass_det(0);
 
-// for(var i=0;i<dest_array.length;i++)
-// {
-//     var newChild1 = document.createElement("tr");
-//     var newSubChild1 =document.createElement("td"); 
-//     var newSubChild2 =document.createElement("td"); 
-//     var newSubChild3 =document.createElement("td");
-//     // var newSubChild4 =document.createElement("td");
-
-//     newSubChild1.textContent=dest_array[i].trainNo;
-//     newSubChild2.textContent=dest_array[i].trainName;
-//     newSubChild3.textContent=dest_array[i].arrivalTime;
-//     // newSubChild4.textContent=pass_array[i].departureTime;
-//     newChild1.appendChild(newSubChild1);
-//     newChild1.appendChild(newSubChild2);
-//     newChild1.appendChild(newSubChild3);
-//     // newChild1.appendChild(newSubChild4);
-
-//     dest_train.appendChild(newChild1);
-     
-
-// }
-// stat_input.value='';
 
 dest_pages=(dest_array.length/ 10) + ((dest_array.length % 10) !== 0)
 dest_pages=Math.floor(dest_pages)
@@ -152,9 +86,13 @@ console.log(dest_array.length)
 
 loading.classList.remove("active");
 hide_input.classList.add("active");
-hide_output.classList.add("active");
 
 
+
+if (response.data.passing && response.data.passing.length>0)
+  show_output.classList.add("active");
+else 
+show_error.classList.add("active");
 
 })
 
