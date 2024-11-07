@@ -10,7 +10,8 @@ async function get_pnr_data(pnr) {
       pnrNumber: pnr,
     },
     headers: {
-      "X-RapidAPI-Key": "e1aa14092bmsh46a7b7297d0ff9fp1a1491jsn9956860de603",
+      "X-RapidAPI-Key": "f5f35543dfmsh48fcdb9e6b6f345p16e4eejsn82174aa9f4b6",
+      // "X-RapidAPI-Key": "e1aa14092bmsh46a7b7297d0ff9fp1a1491jsn9956860de603",
       "X-RapidAPI-Host": "irctc1.p.rapidapi.com",
     },
   };
